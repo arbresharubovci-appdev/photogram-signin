@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # User routes
 
+  get("/user_sign_up" , { :controller => "users" , :action => "new_registration_form"})
+
   # CREATE
   get("/insert_user_record", {:controller => "users", :action => "create" })
 
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   get("/delete_user/:the_user_id", {:controller => "users", :action => "destroy"})
 
   # Photo routes
+
 
   # CREATE
   get("/insert_photo_record", { :controller => "photos", :action => "create" })
