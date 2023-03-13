@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def authenticate
+    render({ :plain => "hi" })
+  end
+
   def toast_cookies
     reset_session
     redirect_to("/" , { :notice => "See ya later!"})
@@ -8,6 +12,12 @@ class UsersController < ApplicationController
   def new_registration_form
    
     render({ :template => "users/signup_form.html.erb"})
+
+  end
+
+  def new_session_form
+   
+    render({ :template => "users/signin_form.html.erb"})
 
   end
   
